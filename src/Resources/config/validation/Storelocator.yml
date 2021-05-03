@@ -1,0 +1,12 @@
+Jgabryelewicz\SyliusStorelocatorPlugin\Entity\Storelocator:
+    properties:
+        name:
+            - NotBlank:
+                message: 'jgabryelewicz_sylius_storelocator_plugin.storelocator.name.not_blank'
+                groups: ['jgabryelewicz']
+            - Length:
+                min: 2
+                minMessage: 'jgabryelewicz_sylius_storelocator_plugin.storelocator.name.min_length'
+                groups: ['jgabryelewicz']
+        translations:
+            - Valid: ~

@@ -1,0 +1,2 @@
+jgabryelewicz_sylius_storelocator_plugin:
+    resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/routing.yml"

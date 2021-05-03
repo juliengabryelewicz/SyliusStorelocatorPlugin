@@ -1,0 +1,8 @@
+services:
+    jgabryelewicz_sylius_storelocator_plugin.event_listener.storelocator_image_upload:
+        class: Jgabryelewicz\SyliusStorelocatorPlugin\EventListener\StorelocatorImageUploadListener
+        arguments:
+            - '@jgabryelewicz_sylius_storelocator_plugin.uploader.storelocator_image'
+        tags:
+            - { name: kernel.event_listener, event: jgabryelewicz_sylius_storelocator_plugin.storelocator.pre_create, method: uploadImage }
+            - { name: kernel.event_listener, event: jgabryelewicz_sylius_storelocator_plugin.storelocator.pre_update, method: uploadImage }

@@ -1,0 +1,5 @@
+services:
+    jgabryelewicz_sylius_storelocator_plugin.menu.content_management:
+        class: Jgabryelewicz\SyliusStorelocatorPlugin\Menu\StorelocatorMenuBuilder
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: buildMenu }

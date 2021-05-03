@@ -1,0 +1,19 @@
+jgabryelewicz_sylius_storelocator_plugin:
+    ui:
+        enabled: Activée
+        name: Nom
+        storelocator: Point de vente
+        storelocator_header: Points de vente
+        storelocator_subheader: Gérer vos points de vente
+        storelocators: Points de vente
+        storelocators_title: Nos points de vente
+        channels: Channels
+        address: Addresse
+        email: Email
+        image: Image
+        phone: Numéro de téléphone
+        description: Description
+        hours: Horaires
+        successfully_imported: Les données ont été importées.
+        form_was_submitted_with_errors: "Le formulaire a les erreurs suivantes :"
+        title: Titre

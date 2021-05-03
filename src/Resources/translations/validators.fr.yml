@@ -1,0 +1,6 @@
+jgabryelewicz_sylius_storelocator_plugin:
+    storelocator:
+        name:
+            not_blank: Le nom ne peut pas être vide.
+            min_length: Le nom doit faire au moins {{ limit }} caractères.
+            max_length: Le nom ne peut pas dépasser {{ limit }} caractères.

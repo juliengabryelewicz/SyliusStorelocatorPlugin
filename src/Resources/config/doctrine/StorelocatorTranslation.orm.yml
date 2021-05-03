@@ -1,0 +1,18 @@
+Jgabryelewicz\SyliusStorelocatorPlugin\Entity\StorelocatorTranslation:
+    type: mappedSuperclass
+    table: jgabryelewicz_storelocator_translation
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            column: description
+            type: text
+            nullable: true
+        hours:
+            column: hours
+            type: text
+            nullable: true

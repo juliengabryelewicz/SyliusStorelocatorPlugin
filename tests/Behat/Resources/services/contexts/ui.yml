@@ -1,0 +1,18 @@
+services:
+    _defaults: { public: true }
+
+    jgabryelewicz_sylius_storelocator_plugin.behat.context.ui.admin.storelocator:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Context\Ui\Admin\StorelocatorContext
+        arguments:
+            - "@sylius.behat.shared_storage"
+            - "@sylius.behat.current_page_resolver"
+            - "@sylius.behat.notification_checker"
+            - "@jgabryelewicz_sylius_storelocator_plugin.behat.page.admin.storelocator.index"
+            - "@jgabryelewicz_sylius_storelocator_plugin.behat.page.admin.storelocator.create"
+            - "@jgabryelewicz_sylius_storelocator_plugin.behat.page.admin.storelocator.update"
+            - "@jgabryelewicz_sylius_storelocator_plugin.behat.string_generator"
+
+    jgabryelewicz_sylius_storelocator_plugin.behat.context.ui.shop.storelocator:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Context\Ui\Shop\StorelocatorContext
+        arguments:
+            - "@jgabryelewicz_sylius_storelocator_plugin.behat.page.shop.storelocator.index"

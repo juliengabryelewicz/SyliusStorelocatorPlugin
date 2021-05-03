@@ -1,0 +1,7 @@
+jgabryelewicz_sylius_storelocator_plugin:
+    storelocator:
+        name:
+            unique: There is an existing storelocator with this code.
+            not_blank: Name cannot be blank.
+            min_length: Name must be at least {{ limit }} characters long.
+            max_length: Name can not be longer than {{ limit }} characters.

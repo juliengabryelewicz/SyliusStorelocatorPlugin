@@ -1,0 +1,11 @@
+default:
+    suites:
+        ui_managing_storelocators:
+            contexts:
+                - sylius.behat.context.hook.doctrine_orm
+                - sylius.behat.context.setup.channel
+                - sylius.behat.context.setup.admin_security
+                - jgabryelewicz_sylius_storelocator_plugin.behat.context.setup.storelocator
+                - jgabryelewicz_sylius_storelocator_plugin.behat.context.ui.admin.storelocator
+            filters:
+                tags: "@managing_storelocators && @ui"

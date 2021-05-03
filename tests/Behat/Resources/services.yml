@@ -1,0 +1,7 @@
+imports:
+    - { resource: "services/contexts.yml" }
+    - { resource: "services/pages.yml" }
+
+services:
+    jgabryelewicz_sylius_storelocator_plugin.behat.string_generator:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Service\StringGenerator

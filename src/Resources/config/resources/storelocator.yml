@@ -1,0 +1,13 @@
+sylius_resource:
+    resources:
+        jgabryelewicz_sylius_storelocator_plugin.storelocator:
+            driver: doctrine/orm
+            classes:
+                model: Jgabryelewicz\SyliusStorelocatorPlugin\Entity\Storelocator
+                interface: Jgabryelewicz\SyliusStorelocatorPlugin\Entity\StorelocatorInterface
+                form: Jgabryelewicz\SyliusStorelocatorPlugin\Form\Type\StorelocatorType
+                repository: Jgabryelewicz\SyliusStorelocatorPlugin\Repository\StorelocatorRepository
+            translation:
+                classes:
+                    model: Jgabryelewicz\SyliusStorelocatorPlugin\Entity\StorelocatorTranslation
+                    interface: Jgabryelewicz\SyliusStorelocatorPlugin\Entity\StorelocatorTranslationInterface

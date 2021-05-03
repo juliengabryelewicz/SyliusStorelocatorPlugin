@@ -1,0 +1,46 @@
+sylius_grid:
+    grids:
+        jgabryelewicz_sylius_storelocator_plugin_admin_storelocator:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%jgabryelewicz_sylius_storelocator_plugin.model.storelocator.class%"
+                    repository:
+                        method: createListQueryBuilder
+                        arguments: ["%locale%"]
+            sorting:
+                name: asc
+            limits: [12, 24]
+            fields:
+                image:
+                    type: twig
+                    label: sylius.ui.image
+                    path: imageSource
+                    options:
+                        template: "@JgabryelewiczSyliusStorelocatorPlugin/Field/_image.html.twig"
+                name:
+                    type: string
+                    label: jgabryelewicz_sylius_storelocator_plugin.ui.name
+                    sortable: ~
+                address:
+                    type: string
+                    label: jgabryelewicz_sylius_storelocator_plugin.ui.address
+                    sortable: ~
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [name]
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

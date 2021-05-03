@@ -1,0 +1,13 @@
+services:
+    jgabryelewicz_sylius_storelocator_plugin.filesystem.storelocator_image:
+        class: Gaufrette\Filesystem
+        arguments:
+            - 'storelocator_image'
+        factory:
+            - '@knp_gaufrette.filesystem_map'
+            - 'get'
+
+    jgabryelewicz_sylius_storelocator_plugin.uploader.storelocator_image:
+        class: Jgabryelewicz\SyliusStorelocatorPlugin\Uploader\StorelocatorImageUploader
+        arguments:
+            - '@jgabryelewicz_sylius_storelocator_plugin.filesystem.storelocator_image'

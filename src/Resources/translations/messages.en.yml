@@ -1,0 +1,19 @@
+jgabryelewicz_sylius_storelocator_plugin:
+    ui:
+        enabled: Enabled
+        name: Name
+        storelocator: Storelocator
+        storelocator_header: Storelocator
+        storelocator_subheader: Manage storelocators
+        storelocators: Storelocators
+        storelocators_title: Our storelocators
+        channels: Channels
+        address: Address
+        email: Email
+        image: Image
+        phone: Phone number
+        description: Description
+        hours: Hours
+        successfully_imported: Data has been imported.
+        form_was_submitted_with_errors: "The form was submitted with following errors:"
+        title: Title

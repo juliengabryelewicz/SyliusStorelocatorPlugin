@@ -1,0 +1,3 @@
+imports:
+    - suites/ui/managing_storelocators.yml
+    - suites/ui/shop_storelocators.yml

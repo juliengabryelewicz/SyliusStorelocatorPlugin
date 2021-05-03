@@ -1,0 +1,18 @@
+jgabryelewicz_sylius_storelocator_plugin_admin_storelocator:
+    resource: |
+        alias: jgabryelewicz_sylius_storelocator_plugin.storelocator
+        section: admin
+        templates: '@JgabryelewiczSyliusStorelocatorPlugin/CrudUi'
+        redirect: update
+        grid: jgabryelewicz_sylius_storelocator_plugin_admin_storelocator
+        except: ['show']
+        permission: true
+        vars:
+            all:
+                header: jgabryelewicz_sylius_storelocator_plugin.ui.storelocator_header
+                subheader: jgabryelewicz_sylius_storelocator_plugin.ui.storelocator_subheader
+                templates:
+                    form: "@JgabryelewiczSyliusStorelocatorPlugin/Storelocator/Crud/_form.html.twig"
+            index:
+                icon: help
+    type: sylius.resource

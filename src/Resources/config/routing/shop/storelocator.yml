@@ -1,0 +1,11 @@
+jgabryelewicz_sylius_storelocator_plugin_shop_storelocator_index:
+    path: /storelocator
+    defaults:
+        _controller: jgabryelewicz_sylius_storelocator_plugin.controller.storelocator:indexAction
+        _sylius:
+            template: "@JgabryelewiczSyliusStorelocatorPlugin/Shop/Storelocator/index.html.twig"
+            repository:
+                method: findEnabledByChannel
+                arguments:
+                    - "expr:service('sylius.context.locale').getLocaleCode()"
+                    - "expr:service('sylius.context.channel').getChannel().getCode()"

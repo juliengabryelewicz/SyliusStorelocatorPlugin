@@ -1,0 +1,10 @@
+services:
+    _defaults: { public: true }
+
+    jgabryelewicz_sylius_storelocator_plugin.behat.context.setup.storelocator:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Context\Setup\StorelocatorContext
+        arguments:
+            - "@sylius.behat.shared_storage"
+            - "@jgabryelewicz_sylius_storelocator_plugin.behat.string_generator"
+            - "@jgabryelewicz_sylius_storelocator_plugin.factory.storelocator"
+            - "@jgabryelewicz_sylius_storelocator_plugin.repository.storelocator"

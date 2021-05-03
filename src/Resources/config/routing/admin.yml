@@ -1,0 +1,2 @@
+jgabryelewicz_sylius_storelocator_plugin_admin_storelocator:
+    resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/routing/admin/storelocator.yml"

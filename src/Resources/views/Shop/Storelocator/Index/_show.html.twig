@@ -1,0 +1,35 @@
+<div class="storelocator ui fluid card">
+    {% if storelocator.imageSource is not empty %}
+        <img src="{{ storelocator.imageSource|imagine_filter('jgabryelewicz_sylius_storelocator_plugin_image') }}" alt="{{ storelocator.name }}" class="ui bordered image" />
+    {% endif %}
+    <div class="content">
+        <h2>
+            {{ storelocator.name }}
+        </h2>
+        {% if storelocator.description is not empty %}
+            <div>
+                {{ storelocator.description }}
+            </div>
+        {% endif %}
+        {% if storelocator.email is not empty %}
+            <div>
+                {{ storelocator.email }}
+            </div>
+        {% endif %}
+        {% if storelocator.phone is not empty %}
+            <div>
+                {{ storelocator.phone }}
+            </div>
+        {% endif %}
+        {% if storelocator.address is not empty %}
+            <div>
+                {{ storelocator.address }}
+            </div>
+        {% endif %}
+        {% if storelocator.hours is not empty %}
+            <div>
+                {{ storelocator.hours }}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,5 @@
+services:
+    jgabryelewicz_sylius_storelocator_plugin.behat.page.shop.storelocator.index:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Page\Shop\Storelocator\IndexPage
+        parent: sylius.behat.symfony_page
+        public: false

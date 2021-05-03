@@ -1,0 +1,16 @@
+services:
+    jgabryelewicz_sylius_storelocator_plugin.form.type.storelocator:
+        class: Jgabryelewicz\SyliusStorelocatorPlugin\Form\Type\StorelocatorType
+        arguments:
+            - "%jgabryelewicz_sylius_storelocator_plugin.model.storelocator.class%"
+            - ['jgabryelewicz']
+        tags:
+            - { name: form.type }
+
+    jgabryelewicz_sylius_storelocator_plugin.form.type.translation.storelocator:
+        class: Jgabryelewicz\SyliusStorelocatorPlugin\Form\Type\Translation\StorelocatorTranslationType
+        arguments:
+            - "%jgabryelewicz_sylius_storelocator_plugin.model.storelocator_translation.class%"
+            - ['jgabryelewicz']
+        tags:
+            - { name: form.type }

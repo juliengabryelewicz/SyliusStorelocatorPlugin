@@ -1,0 +1,10 @@
+default:
+    suites:
+        ui_shop_storelocators:
+            contexts:
+                - sylius.behat.context.hook.doctrine_orm
+                - sylius.behat.context.setup.channel
+                - jgabryelewicz_sylius_storelocator_plugin.behat.context.setup.storelocator
+                - jgabryelewicz_sylius_storelocator_plugin.behat.context.ui.shop.storelocator
+            filters:
+                tags: "@shop_storelocators && @ui"

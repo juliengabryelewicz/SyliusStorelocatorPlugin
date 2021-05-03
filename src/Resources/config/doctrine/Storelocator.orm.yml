@@ -1,0 +1,47 @@
+Jgabryelewicz\SyliusStorelocatorPlugin\Entity\Storelocator:
+    type: mappedSuperclass
+    table: jgabryelewicz_storelocator
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            column: name
+            type: string
+            nullable: false
+        imageSource:
+            column: image_source
+            type: string
+            nullable: true
+        address:
+            column: address
+            type: text
+            nullable: true
+        email:
+            column: email
+            type: string
+            nullable: true
+        phone:
+            column: phone
+            type: string
+            nullable: true
+        enabled:
+            column: enabled
+            type: boolean
+            nullable: false
+    manyToMany:
+        channels:
+            targetEntity: Sylius\Component\Channel\Model\ChannelInterface
+            joinTable:
+                name: jgabryelewicz_storelocator_channels
+                joinColumns:
+                    storelocator_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE
+                inverseJoinColumns:
+                    channel_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE

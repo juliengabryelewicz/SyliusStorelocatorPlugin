@@ -1,0 +1,21 @@
+services:
+    jgabryelewicz_sylius_storelocator_plugin.behat.page.admin.storelocator.index:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Page\Admin\Storelocator\IndexPage
+        parent: sylius.behat.page.admin.crud.index
+        public: false
+        arguments:
+            - 'jgabryelewicz_sylius_storelocator_plugin_admin_storelocator_index'
+
+    jgabryelewicz_sylius_storelocator_plugin.behat.page.admin.storelocator.create:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Page\Admin\Storelocator\CreatePage
+        parent: sylius.behat.page.admin.crud.create
+        public: false
+        arguments:
+            - 'jgabryelewicz_sylius_storelocator_plugin_admin_storelocator_create'
+
+    jgabryelewicz_sylius_storelocator_plugin.behat.page.admin.storelocator.update:
+        class: Tests\Jgabryelewicz\SyliusStorelocatorPlugin\Behat\Page\Admin\Storelocator\UpdatePage
+        parent: sylius.behat.page.admin.crud.update
+        public: false
+        arguments:
+            - 'jgabryelewicz_sylius_storelocator_plugin_admin_storelocator_update'

@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Jgabryelewicz\SyliusStorelocatorPlugin
+        psr4_prefix: Jgabryelewicz\SyliusStorelocatorPlugin

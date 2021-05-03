@@ -1,0 +1,26 @@
+imports:
+    - { resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/resources.yml" }
+    - { resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/grids.yml" }
+    - { resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/services.yml" }
+
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        storelocator_image:
+            local:
+                directory: "%sylius_core.public_dir%/media/storelocator-image"
+                create: true
+    filesystems:
+        storelocator_image:
+            adapter: storelocator_image
+
+liip_imagine:
+    loaders:
+        storelocator_image:
+            filesystem:
+                data_root: "%kernel.project_dir%/public/media/storelocator-image"
+    filter_sets:
+        jgabryelewicz_sylius_storelocator_plugin_image:
+            data_loader: storelocator_image
+            filters:
+                thumbnail: { size: [400, 400], mode: outbound }

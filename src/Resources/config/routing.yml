@@ -1,0 +1,7 @@
+jgabryelewicz_sylius_storelocator_plugin_admin:
+    resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/routing/admin.yml"
+    prefix: '/%sylius_admin.path_name%'
+
+jgabryelewicz_sylius_storelocator_plugin_shop:
+    resource: "@JgabryelewiczSyliusStorelocatorPlugin/Resources/config/routing/shop.yml"
+    prefix: /{_locale}
